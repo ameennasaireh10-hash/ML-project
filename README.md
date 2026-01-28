@@ -1,5 +1,6 @@
 
 📌 Project Overview
+
 This project analyzes the Instacart Market Basket dataset to predict:
 
 Task A (Classification): Whether a user will reorder a specific product in their next order.
@@ -9,10 +10,12 @@ Task B (Regression): Days until the user places the next order.
 The project includes full EDA, feature engineering, multiple machine learning models, hyperparameter tuning, and model explainability.
 
 📂 Dataset
+
 Instacart Online Grocery Shopping Dataset (Kaggle)
 Includes: orders, products, aisles, departments, and user purchase history.
 
 ⚙️ Methodology
+
 1. Data Preprocessing & EDA
 Data cleaning and memory-efficient joins
 
@@ -46,6 +49,7 @@ Cross-validation and hyperparameter tuning
 SHAP for model explainability
 
 🛠 Tech Stack
+
 Python
 
 Pandas, NumPy
@@ -59,10 +63,12 @@ Matplotlib, Seaborn, Plotly
 SHAP
 
 👥 Team Members
+
 Ameen Nasaireh || Ayham Smadi
 
 
 🎯 Key Results
+
 Best classification model: XGBoost (Accuracy = 0.74070)
 
 Best regression model: Random Forest (RMSE = 3.92510)
