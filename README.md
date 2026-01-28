@@ -17,6 +17,7 @@ Includes: orders, products, aisles, departments, and user purchase history.
 ⚙️ Methodology
 
 1. Data Preprocessing & EDA
+
 Data cleaning and memory-efficient joins
 
 Missing value analysis and outlier handling
@@ -24,6 +25,7 @@ Missing value analysis and outlier handling
 Temporal analysis (hour, day, recency, frequency)
 
 2. Feature Engineering
+
 User-level features (order count, reorder ratio, recency)
 
 Product-level features (popularity, reorder rate)
@@ -33,13 +35,17 @@ User–Product interaction features
 Time-based features
 
 3. Models Implemented
+
 Classification:
+
 Logistic Regression, KNN, SVM, Decision Tree, Random Forest, XGBoost
 
 Regression:
+
 Linear Regression, SVR, KNN Regressor, Random Forest, XGBoost
 
 4. Evaluation
+
 Classification: AUC, F1, Precision, Recall, PR Curve
 
 Regression: MAE, RMSE, R²
