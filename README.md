@@ -1,52 +1,68 @@
-# ML-project
 
-1- preprocessing:
+📌 Project Overview
+This project analyzes the Instacart Market Basket dataset to predict:
 
-Ameen(70%): Data ingestion & memory-savvy joins , Cleaning & Imputation , Encoding ,  Feature scaling , Dimensionality & collinearity , Imbalanced data handling
+Task A (Classification): Whether a user will reorder a specific product in their next order.
 
-Ayham(30%): Exploratory Data Analysis , Feature engineering , Time-aware splitting
+Task B (Regression): Days until the user places the next order.
 
-2- Task A:
+The project includes full EDA, feature engineering, multiple machine learning models, hyperparameter tuning, and model explainability.
 
-Ameen(40%): Logistic Regression , K-Nearest Neighbors classifier , Random Forest classifier
+📂 Dataset
+Instacart Online Grocery Shopping Dataset (Kaggle)
+Includes: orders, products, aisles, departments, and user purchase history.
 
-Ayham(60%): Support Vector Machine , Decision Tree classifier , Gradient boosting classifier(XGBoost) , some enhancing on data splitting
+⚙️ Methodology
+1. Data Preprocessing & EDA
+Data cleaning and memory-efficient joins
 
-3- Task B:
+Missing value analysis and outlier handling
 
-the target we choose : days-to-next-order
+Temporal analysis (hour, day, recency, frequency)
 
-Ameen(60%): K-Nearest Neighbors Regressor , Decision Tree Regressor , Random Forest Regressor , some enhancing on data splitting
+2. Feature Engineering
+User-level features (order count, reorder ratio, recency)
 
-Ayham(40%):  Linear Regression , Support Vector Regressor , Gradient boosting regressor (XGBoost)
+Product-level features (popularity, reorder rate)
 
-4- Evaluation metrics:
+User–Product interaction features
 
-Ameen(60%): Regression , Model comparison
+Time-based features
 
-Ayham(40%): Classification
+3. Models Implemented
+Classification:
+Logistic Regression, KNN, SVM, Decision Tree, Random Forest, XGBoost
 
-5- Required visualizations & plots:
+Regression:
+Linear Regression, SVR, KNN Regressor, Random Forest, XGBoost
 
-Ameen(50%): SHAP , Residual vs predicted plots , residual histograms & Q-Q plots , Learning curves , Interactive plot , Correlation heatmap and feature correlation scatter grids 
+4. Evaluation
+Classification: AUC, F1, Precision, Recall, PR Curve
 
-Ayham(50%): Decision boundary plots , Confusion matrices & normalized confusion matrices , ROC curves and PR curves , Calibration plot 
+Regression: MAE, RMSE, R²
+
+Cross-validation and hyperparameter tuning
+
+SHAP for model explainability
+
+🛠 Tech Stack
+Python
+
+Pandas, NumPy
+
+Scikit-learn
+
+XGBoost / LightGBM
+
+Matplotlib, Seaborn, Plotly
+
+SHAP
+
+👥 Team Members
+Ameen Nasaireh || Ayham Smadi
 
 
-6- Cross-validation & hyperparameter tuning:
+🎯 Key Results
+Best classification model: XGBoost (Accuracy = 0.74070)
 
-nested cross-validation: Standard Nested Cross-Validation involves random shuffling , which breaks the chronological order of user transactions. 
-This would introduce data leakage , allowing the model to train on future orders to predict past ones.
-Therefore , we replaced it with a time-aware validation strategy to strictly preserve the temporal sequence and simulate real-world predictive conditions.
-
-Ameen(50%): validation curves , GridSearchCV
-
-Ayham(50%): GridSearchCV , early stopping(XGBoost)
-
-7- Robustness & stress tests:
-
-Ameen:  class imbalance handled via resampling and compering
-
-8- Decision boundary requirement:
-
-Ayham
+Best regression model: Random Forest (RMSE = 3.92510)
